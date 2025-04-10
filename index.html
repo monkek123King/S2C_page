@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta property="og:title" content="Separate to Collaborate: Dual-Stream Diffusion Model for Coordinated Piano Hand Motion Synthesisl"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <title>Separate to Collaborate: Dual-Stream Diffusion Model for Coordinated Piano Hand Motion Synthesis</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWRYSDM25P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EWRYSDM25P');
+</script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="icon" href="static/figures/icon2.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+<section class="publication-header">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Separate to Collaborate: Dual-Stream Diffusion Model for Coordinated Piano Hand Motion Synthesis</h1>
+          <div class="is-size-3 publication-authors">
+            ACMMM 2025 Conference Submission
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="publication-author-block">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://github.com/monkek123King/" target="_blank">Zihao Liu</a>,</span>
+            <span class="author-block"><a href="https://github.com/OMTHSJUHW/" target="_blank">Mingwen Ou</a>,</span>
+            <span class="author-block"><a href="https://www.semanticscholar.org/author/Austin-Xu/2224549852/" target="_blank">Zunnan Xu</a>,</span>
+            <span class="author-block"><a href="https://github.com/hjqqqq-bot/" target="_blank">Jiaqi Huang</a>,</span>
+            <span class="author-block"><a href="https://vincenthancoder.github.io/" target="_blank">Haonan Han</a>,</span>
+            <span class="author-block"><a href="https://li-ronghui.github.io/" target="_blank">Ronghui Li</a></span>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?hl=zh-CN&user=Xrh1OIUAAAAJ&view_op=list_works&sortby=pubdate/" target="_blank">Xiu Li</a>
+            
+            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">	TSINGHUA UNIVERSITY, CHINA</span> 
+            <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+          </div>
+          
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="item">
+          
+        </p>
+        </div>
+        <p style="margin-bottom: 30px">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Automating the synthesis of coordinated bimanual piano performances poses significant challenges, 
+            particularly in capturing the intricate choreography between the hands while preserving their distinct 
+            kinematic signatures. In this paper, we propose a dual-stream neural framework designed to generate 
+            synchronized hand gestures for piano playing from audio input, addressing the critical challenge of 
+            modeling both hand independence and coordination. Our framework introduces two key innovations: 
+            (i) a decoupled diffusion-based generation framework that independently models each hand's motion via 
+            dual-noise initialization, sampling distinct latent noise for each while leveraging a shared positional condition; 
+            and (ii) a Hand-Coordinated Asymmetric Attention (HCAA) mechanism that suppresses common noise during the 
+            denoising process while adaptively enhancing inter-hand coordination. The system operates hierarchically: 
+            it first predicts 3D hand positions from audio features and then generates joint angles through position-aware 
+            diffusion models, where parallel denoising streams interact via HCAA. Comprehensive evaluations demonstrate 
+            that our framework outperforms existing state-of-the-art methods across multiple metrics. Our code will be released.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/intro.png" alt="cars peace" style="width: 40%; height: auto;"/>
+      </div>
+     
+    
+  </div>
+</div>
+</div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">METHOD</h2>
+          <p>
+            The overall framework of our proposed method. It consists of three main modules: (1) Position Predictor, which predicts
+            hand positions from piano audio; (2) Hand-Coordinated Asymmetric Attention(HCAA), which enables feature interaction in
+            the intermediate layers of the U-Net; (3) Decoupled Gesture Generator, which employs two independent diffusion models to
+            generate motions for the left and right hands separately.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/framework.png" alt="cars peace" style="width: 70%; height: auto;"/>
+      </div>
+     
+    
+  </div>
+</div>
+</div>
+</section>
+
+
+
+ <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Compare with Ground-Truth</h2>
+          <p>
+            We visualize and compare the motions generated by our model with the corresponding ground-truth to assess their similarity and expressiveness.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="column is-centered has-text-centered">
+      	<p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/400.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/165.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/185.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/245.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/250.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/260.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/350.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <p>(Blue=Ground-Truth, Gold=Synthesis)</p>
+                <video poster="" id="tree" controls muted style="width: 40%; height: auto;">
+          <source src="static/figures/85.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative examples (Fast-paced)</h2>
+          <p>
+            Fast-paced music is often accompanied by dense note sequences and rapid rhythmic shifts, 
+            imposing higher demands on both the timeliness and accuracy of hand motion generation.
+            In such musical contexts, the motion generation model must not only accurately capture the 
+            rapid positional changes of the hands in 3D space, but also produce coordinated gestures that 
+            align seamlessly with the rhythm of the notes, thereby ensuring a natural and fluid piano performance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/10.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/15.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/30.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">      	
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/35.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/110.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/220.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/315.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/375.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative examples (Slow-paced)</h2>
+          <p>
+            In slow-paced music, hand movements tend to follow a more relaxed rhythm, with smoother and more natural 
+            transitions between gestures. While such scenarios impose less stringent demands on the temporal responsiveness 
+            of the motion generation model, they require higher quality in terms of spatial precision and local coherence. 
+            The model must be capable of producing smooth, fine-grained hand motions that faithfully capture the expressive
+            nuances characteristic of slow piano performances.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/5.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/25.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/50.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">      	
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/95.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/235.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/270.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/320.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+                <video poster="" id="tree" controls muted style="width: 60%; height: auto;">
+          <source src="static/figures/345.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>
+        Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+        href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+  <script type="text/javascript">
+    var sc_project=12351448; 
+    var sc_invisible=1; 
+    var sc_security="c676de4f"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/12351448/0/c676de4f/1/"
+    alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
