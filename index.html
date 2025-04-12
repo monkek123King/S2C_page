@@ -10,19 +10,10 @@
 
 
   <title>Separate to Collaborate: Dual-Stream Diffusion Model for Coordinated Piano Hand Motion Synthesis</title>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWRYSDM25P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EWRYSDM25P');
-</script>
   
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
-  <link rel="icon" href="static/figures/icon2.png">
+  <link rel="icon" href="static/figures/icon.png">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -70,18 +61,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Automating the synthesis of coordinated bimanual piano performances poses significant challenges, 
-            particularly in capturing the intricate choreography between the hands while preserving their distinct 
-            kinematic signatures. In this paper, we propose a dual-stream neural framework designed to generate 
-            synchronized hand gestures for piano playing from audio input, addressing the critical challenge of 
-            modeling both hand independence and coordination. Our framework introduces two key innovations: 
-            (i) a decoupled diffusion-based generation framework that independently models each hand's motion via 
-            dual-noise initialization, sampling distinct latent noise for each while leveraging a shared positional condition; 
-            and (ii) a Hand-Coordinated Asymmetric Attention (HCAA) mechanism that suppresses common noise during the 
-            denoising process while adaptively enhancing inter-hand coordination. The system operates hierarchically: 
-            it first predicts 3D hand positions from audio features and then generates joint angles through position-aware 
-            diffusion models, where parallel denoising streams interact via HCAA. Comprehensive evaluations demonstrate 
-            that our framework outperforms existing state-of-the-art methods across multiple metrics. Our code will be released.
+            Automating the synthesis of coordinated bimanual piano performances poses significant 
+            challenges, particularly in capturing the intricate choreography between the hands while 
+            preserving their distinct kinematic signatures. In this paper, we propose a dual-stream 
+            neural framework designed to generate synchronized hand gestures for piano playing from 
+            audio input, addressing the critical challenge of modeling both hand independence and coordination. 
+            Our framework introduces two key innovations: (i) a decoupled diffusion-based generation framework 
+            that independently models each hand's motion via dual-noise initialization, sampling distinct latent 
+            noise for each while leveraging a shared positional condition; and (ii) a Hand-Coordinated 
+            Asymmetric Attention (HCAA) mechanism suppresses symmetric (common-mode) noise to highlight 
+            asymmetric hand-specific features, while adaptively enhancing inter-hand coordination during denoising. 
+            The system operates hierarchically: it first predicts 3D hand positions from audio features and then 
+            generates joint angles through position-aware diffusion models, where parallel denoising streams 
+            interact via HCAA. Comprehensive evaluations demonstrate that our framework outperforms existing 
+            state-of-the-art methods across multiple metrics. 
           </p>
         </div>
       </div>
@@ -111,10 +104,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">METHOD</h2>
           <p>
-            The overall framework of our proposed method. It consists of three main modules: (1) Position Predictor, which predicts
-            hand positions from piano audio; (2) Hand-Coordinated Asymmetric Attention(HCAA), which enables feature interaction in
-            the intermediate layers of the U-Net; (3) Decoupled Gesture Generator, which employs two independent diffusion models to
-            generate motions for the left and right hands separately.
+            The overall framework of our proposed method. It consists of three main modules: 
+            (1) Position Predictor, which predicts hand positions from piano audio; 
+            (2) Hand-Coordinated Asymmetric Attention (HCAA), applied to the intermediate U-Net
+            features after a Multi-Head Self-Attention (MHSA) layer, enabling asymmetric 
+            feature interaction between the two hands. 
+            (3) Decoupled Gesture Generator, which employs two independent diffusion models to generate motions for the left and right hands separately.
           </p>
         </div>
       </div>
