@@ -33,7 +33,7 @@
 
 <body>
 
-
+<!-- 
 <section class="publication-header">
   <div class="hero-body">
     <div class="container is-max-widescreen">
@@ -45,7 +45,82 @@
         </div>
     </div>
   </div>
+</section> -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Separate to Collaborate: Dual-Stream Diffusion Model for Coordinated Piano Hand Motion Synthesis</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/monkek123King" target="_blank">Zihao Liu</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/OMTHSJUHW" target="_blank">Mingwen Ou</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://kkakkkka.github.io/" target="_blank">Zunnan Xu</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/jiaqihuang01" target="_blank">Jiaqi Huang</a>,</span>
+              <span class="author-block">
+                <a href="https://vincenthancoder.github.io/" target="_blank">Haonan Han</a>,</span>
+              <span class="author-block">
+                <a href="https://li-ronghui.github.io/" target="_blank">Ronghui Li</a>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=Xrh1OIUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Xiu Li</a><sup>†</sup></span>
+                  </div>
+                  <p style="height: 10px;">&nbsp;</p> 
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><font size="4"><a href="https://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font></span>
+
+                    <p style="height: 10px;">&nbsp;</p> 
+                    <span class="author-block"><font size="5"><a href="https://acmmm2025.org/" target="_blank"><b style="color: OrangeRed;">ACMMM 2025</b></a></font></span><br>
+                    <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution.</small></span>
+                    <span class="eql-cntrb"><small><sup>†</sup>Corresponding author.</small></span><br>
+                  </div>
+
+              <!-- ArXiv Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2504.09885" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/monkek123King/S2C" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Hugging Face Link -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/thuteam/S2C" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/hf.svg" style="width: 70%;">
+                    </span>
+                    <span>Hugging Face</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 
 <section class="section hero is-light">
@@ -61,19 +136,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Automating the synthesis of coordinated bimanual piano performances poses significant challenges, 
-            particularly in capturing the intricate choreography between the hands while preserving their distinct 
-            kinematic signatures. In this paper, we propose a dual-stream neural framework designed to generate 
-            synchronized hand gestures for piano playing from audio input, addressing the critical challenge of 
-            modeling both hand independence and coordination. Our framework introduces two key innovations: (i) 
-            a decoupled diffusion-based generation framework that independently models each hand's motion via 
-            dual-noise initialization, sampling distinct latent noise for each while leveraging a shared positional 
-            condition, and (ii) a Hand-Coordinated Asymmetric Attention (HCAA) mechanism suppresses symmetric (common-mode) 
-            noise to highlight asymmetric hand-specific features, while adaptively enhancing inter-hand coordination 
-            during denoising. The system operates hierarchically: it first predicts 3D hand positions from audio features
-            and then generates joint angles through position-aware diffusion models, where parallel denoising streams 
-            interact via HCAA. Comprehensive evaluations demonstrate that our framework outperforms existing state-of-the-art 
-            methods across multiple metrics. Our code will be released.
+              Automating the synthesis of coordinated bimanual piano performances poses significant challenges, 
+              particularly in capturing the intricate choreography between the hands while preserving their distinct 
+              kinematic signatures. In this paper, we propose a dual-stream neural framework designed to generate 
+              synchronized hand gestures for piano playing from audio input, addressing the critical challenge of 
+              modeling both hand independence and coordination. Our framework introduces two key innovations: 
+              (i) a decoupled diffusion-based generation framework that independently models each hand's motion 
+              via dual-noise initialization, sampling distinct latent noise for each while leveraging a shared
+              positional condition, and (ii) a Hand-Coordinated Asymmetric Attention (HCAA) mechanism suppresses 
+              symmetric (common-mode) noise to highlight asymmetric hand-specific features, while adaptively 
+              enhancing inter-hand coordination during denoising. Comprehensive evaluations demonstrate that our 
+              framework outperforms existing state-of-the-art methods across multiple metrics. 
           </p>
         </div>
       </div>
